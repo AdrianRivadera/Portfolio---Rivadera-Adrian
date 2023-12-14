@@ -1,17 +1,18 @@
-import SideBar from '../Components/SideBar/SideBar'
+
 import Inicio from './Inicio'
 import React from 'react'
 import { SobreMi } from './SobreMi'
 import { Proyectos } from './Proyectos'
 import { Footer } from '../Components/Footer'
 import { Contacto } from './Contacto'
+import Encabezado from '../Components/Encabezado'
 
 
 
 const Home = () => {
   return (
     <>
-      <SideBar />
+      <Encabezado />  
       <Inicio />
       <SobreMi />
       <Proyectos />

@@ -3,28 +3,31 @@ import styled from 'styled-components'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Tooltip from '@mui/material/Tooltip';
+import fondosobremi from '../assets/fondosobremi4.webp'
+import iconoSobreMi from '../assets/iconosobre.webp'
+import bordeGira from '../assets/circuloFrontSobreMi.svg'
 
 export function SobreMi() {
     return (
-        <>
-            <SobreMiContainer>
+        <>  
+            <SobreMiContainer id='sobreMi'>
                 <div className='container'>
                     <div className='sobreMi'>
                         <div className='img-content'>
-                            <img src='../assets/fondoSobreMi.jpg' alt="emoji" className='img-lateral' />
+                            <img src={fondosobremi} alt="fodno-manosTrabajando" className='img-lateral' />
                             <div className='container_emoji'>
                                 <span>
-                                    <img src="https://www.stefantopalovic.com/static/media/text2.3d5aa6ba2d0632bb4e0572631c3f9dc2.svg" alt="text" />
+                                    <img src={bordeGira} alt="text" />
                                 </span>
-                                <img src='../assets/iconosobremi.png' alt="emoji" className='work-emoji' />
+                                <img src={iconoSobreMi} alt="emoji" className='work-emoji' />
                             </div>
 
                         </div>
                         <div className='text-side'>
-                            <h3>Sobre mi</h3>
-                            <h4>Técnico en informática profesional</h4>
-                            <p>Actualmente, trabajo en  la empresa PWC como desarrollador full stack semi senior, donde me desempeño principalmente en tareas relacionadas con el front-end. <br /> <br />Durante los últimos tres años, me enfoqué en mejorar mis habilidades en el desarrollo front-end a través de cursos especializados. Además, estoy cursando la carrera universitaria en Ingeniería en Computación en la UNTREF (primer año).</p>
-                            <button className='button-curriculum'>Curriculum vitae</button>
+                            <h2>Sobre mi</h2>
+                            <p className='subtitle'>Técnico en informática profesional</p>
+                            <p>Actualmente, trabajo en  la empresa <a href='https://www.pwc.com.ar/'  className='link-text'>PWC Argentina</a> como desarrollador full stack semi senior, donde me desempeño principalmente en tareas relacionadas con el front-end. <br /> <br />Durante los últimos tres años, me enfoqué en mejorar mis habilidades en el desarrollo front-end a través de cursos especializados. Además, estoy cursando la carrera universitaria en Ingeniería en Computación en la UNTREF (primer año).</p>
+                            <button className='button-curriculum'>Descargar CV</button>
                         </div>
                     </div>
 
@@ -36,7 +39,6 @@ export function SobreMi() {
 
 
 const SobreMiContainer = styled.div`
-    background-color: #ffff;
     padding: 8rem 0;
     display: flex;
     justify-content: center;
@@ -74,7 +76,9 @@ const SobreMiContainer = styled.div`
         .img-lateral{
             border-radius: 1.7rem;
             height: 100%;
+            max-height: 30rem;
             width: 80%;
+            max-width: 30rem;
             margin: auto;
             @media only screen and (max-width: 1024px) {
                 width: 21rem;
@@ -93,8 +97,8 @@ const SobreMiContainer = styled.div`
             .work-emoji{
                 bottom: 0px;
                 position: absolute;
-                right: 6px;
-                width: 5rem!important;
+                right: -5px;
+                width: 6.2rem!important;
                 z-index: 10;
                 @media only screen and (max-width: 1024px) {
                     display: none;
@@ -137,16 +141,20 @@ const SobreMiContainer = styled.div`
             width: 100%;
             padding: 0 0 0 0;
         }
-        .button-curriculum{
-            padding: 10px 10px;
-            margin: 2rem 0 0 0;
-            border: none;
-            background-color: white;
-            font-weight: bold;
-            border: 1px solid #147efb;
+        .link-text{
             color: #147efb;
-            border-radius: 6px;
-            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .button-curriculum{
+            padding: 12px 18px;
+            margin: 2rem 0 0 0;
+            background-color: #4196f6;
+            font-weight: 500;
+            border: none;
+            color: #ffff;
+            border-radius: 20px;
+            font-size: 1rem;
             cursor: pointer;
             transition: all .4s;
             &:hover{
@@ -154,21 +162,20 @@ const SobreMiContainer = styled.div`
                 color: white;
             }
         }   
-        h3{
+        h2{
             color: #147efb;
             font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 1rem;
             text-transform: uppercase;
         }
-        h4{
-            color: #2d2e32;
+        .subtitle{
+            font-weight: bold;
             font-size: 1.4rem;
             line-height: 1.4;
             margin-bottom: 2rem;
         }
         p{
-            color: #767676;
             font-size: 1rem;
             font-weight: 500;
             line-height: 1.5;

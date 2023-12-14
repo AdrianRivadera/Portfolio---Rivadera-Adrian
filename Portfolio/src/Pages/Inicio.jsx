@@ -2,12 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Tooltip from '@mui/material/Tooltip';
-
+import Tooltip from '@mui/material/Tooltip'
+import fotoPerfil from '../assets/foto-perfil.webp'
+import '../colors.css'; 
+import html from '../assets/HTML.svg'
+import css from '../assets/CSS.svg'
+import javascript from '../assets/JavaScript.svg'
+import typescript from '../assets/TypeScript.svg'
+import react from '../assets/React-Dark.svg'
+import sass from '../assets/Sass.svg'
+import figma from '../assets/Figma-Dark.svg'
 
 const Inicio = () => {
   return (
-    <ContainerInicio>
+    <ContainerInicio id='inicio'>
       <div className='container'>
         <div className='content'>
           <div className='container_text'>
@@ -18,6 +26,7 @@ const Inicio = () => {
                 href="https://www.linkedin.com/in/adrian-rivadera/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visitá mi Linkedin"
               >
                 <span className='iconSocialMedia'><LinkedInIcon sx={{ fontSize: 36 }} /></span>
               </a>
@@ -25,6 +34,7 @@ const Inicio = () => {
                 href="https://github.com/AdrianRivadera"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visitá mi GitHub"
               >
                 <span className='iconSocialMedia'><GitHubIcon sx={{ fontSize: 36 }} /></span>
               </a>
@@ -34,28 +44,31 @@ const Inicio = () => {
         </div>
         <StackContent>
           <div className='stack_text'>
-            <h5>Habilidades</h5>
+            <p>Habilidades</p>
             <span>|</span>
           </div>
 
           <div className='stack_icon'>
             <Tooltip title="HTML">
-              <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/HTML.svg" alt="skill-icon" />
+              <img src={html} alt="skill-icon" className='iconSkills'/>
             </Tooltip>
             <Tooltip title="CSS">
-              <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/CSS.svg" alt="skill-icon" />
+              <img src={css} alt="skill-icon" className='iconSkills'/>
             </Tooltip>
             <Tooltip title="JavaScript">
-              <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/JavaScript.svg" alt="skill-icon" />
+              <img src={javascript} alt="skill-icon" className='iconSkills'/>
             </Tooltip>
             <Tooltip title="TypeScript">
-              <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/TypeScript.svg" alt="skill-icon" />
+              <img src={typescript} alt="skill-icon" className='iconSkills'/>
             </Tooltip>
             <Tooltip title="React JS">
-              <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg" alt="skill-icon" />
+              <img src={react} alt="skill-icon" className='iconSkills'/>
             </Tooltip>
             <Tooltip title="Sass">
-              <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/Sass.svg" alt="skill-icon" />
+              <img src={sass} alt="skill-icon" className='iconSkills'/>
+            </Tooltip>
+            <Tooltip title="Figma">
+              <img src={figma} alt="skill-icon" className='iconSkills'/>
             </Tooltip>
 
           </div>
@@ -73,7 +86,7 @@ export default Inicio
 
 const ContainerInicio = styled.div`
 
-  z-index: 10;
+  z-index: 9;
   display: flex;
   height: calc(100vh);
   display: flex;
@@ -98,7 +111,6 @@ const ContainerInicio = styled.div`
         max-width: 30rem;
         h1{
         font-size: 3.4rem;
-        color:  var(--var-color-text-hover);
         line-height: 1.2;
         } p{
         font-size: 1.2rem;
@@ -153,9 +165,9 @@ const StackContent = styled.div`
   .stack_text{
     display: flex;
     align-items: center;
-    h5{
+    p{
       font-weight: 600;
-      font-size: 20px;
+      font-size: 1.2rem;
     }
     span{
       font-weight: 300;
@@ -169,8 +181,9 @@ const StackContent = styled.div`
     flex-wrap: wrap;
     gap: .4rem;
     list-style: none;
-    img{
-      width: 50px;
+    .iconSkills{
+      width: 3.4rem;
+      height: 3.4rem;
       margin: 0 10px;
       cursor: pointer;
       transition: all .3s ease-in-out;
@@ -184,7 +197,7 @@ const StackContent = styled.div`
     justify-content: center;
     .stack_text{
       justify-content: center;
-      h5{
+      p{
         border-bottom: 1px solid;
       }
       span{
@@ -202,7 +215,7 @@ const StackContent = styled.div`
 const ConImgPerfil = styled.div`
     -webkit-animation: morph 8s ease-in-out infinite;
     animation: morph 8s ease-in-out infinite;
-    background-image: url(http://drive.google.com/uc?export=view&id=125n3QLkKxeob3CQy12w8_bIm2iMdYHqE);
+    background-image:  url(${fotoPerfil});
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CardProyecto } from '../Components/SideBar/CardProyecto'
-
-
+import { CardProyecto } from '../Components/CardProyecto'
+import proyectoDoctor from '../assets/Doc.-Online.webp'
+import figma from '../assets/Figma-Dark.svg'
+import react from '../assets/React-Dark.svg'
+import styledComponent from '../assets/styledComponents.svg'
 
 export function Proyectos() {
 
@@ -15,9 +17,9 @@ export function Proyectos() {
 
     return (
         <>
-            <ContainerSobreMi>
+            <ContainerSobreMi id='proyectos'>
                 <div className='project-container'>
-                    <p>Portfolio</p>
+                    <p>Proyectos</p>
                     <h3>Cada proyecto es una pieza importante de mi crecimiento profesional.</h3>
 
                     <div className='cards-container'>
@@ -28,52 +30,16 @@ export function Proyectos() {
                             />)
                         } */}
                         <CardProyecto
-                            imgCard={"https://www.stefantopalovic.com/static/media/car-rental-full.c58b37da333d73238fdd.webp"}
-                            tituloProyecto={"Car rental"}
-                            descripcionProyecto={"A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars."}
-                            stackProyecto1={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto2={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto3={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto4={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            codigoProyecto={"https://www.youtube.com/watch?v=RELxs6kKrbM"}
+                            imgCard={proyectoDoctor}
+                            tituloProyecto={"Doc. Online"}
+                            descripcionProyecto={"Desarrollé de forma integral una plataforma que simplifica la solicitud de turnos médicos y trámites REPROCANN, encargándome también del diseño."}
+                            stackProyecto1={react}
+                            stackProyecto2={figma}
+                            stackProyecto3={styledComponent}
+                            linkProyecto={"https://front-doc-online.vercel.app/"}
                             orden={"none"}
                         />
 
-                        <CardProyecto
-                            imgCard={"https://www.stefantopalovic.com/static/media/car-rental-full.c58b37da333d73238fdd.webp"}
-                            tituloProyecto={"Car rental"}
-                            descripcionProyecto={"A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars."}
-                            stackProyecto1={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto2={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto3={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto4={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            codigoProyecto={"https://www.youtube.com/watch?v=RELxs6kKrbM"}
-                            orden={"reverso"}
-                        />
-
-                        <CardProyecto
-                            imgCard={"https://www.stefantopalovic.com/static/media/car-rental-full.c58b37da333d73238fdd.webp"}
-                            tituloProyecto={"Car rental"}
-                            descripcionProyecto={"A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars."}
-                            stackProyecto1={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto2={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto3={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto4={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            codigoProyecto={"https://www.youtube.com/watch?v=RELxs6kKrbM"}
-                            orden={"none"}
-                        />
-
-                        <CardProyecto
-                            imgCard={"https://www.stefantopalovic.com/static/media/car-rental-full.c58b37da333d73238fdd.webp"}
-                            tituloProyecto={"Car rental"}
-                            descripcionProyecto={"A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars."}
-                            stackProyecto1={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto2={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto3={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            stackProyecto4={"https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/React-Dark.svg"}
-                            codigoProyecto={"https://www.youtube.com/watch?v=RELxs6kKrbM"}
-                            orden={"reverso"}
-                        />
                     </div>
                 </div>
             </ContainerSobreMi>

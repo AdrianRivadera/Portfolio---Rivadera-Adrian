@@ -10,12 +10,13 @@ export function Footer() {
         <FooterContainer>
             <div className='container'>
                 <div className='footer-text'>
-                    <h3>Copyright © 2023. All rights are reserved</h3>
+                    <h3>Copyright © 2023 - Todos los derechos reservados.</h3>
                     <div className='footer-social'>
                         <a
                             href="https://www.linkedin.com/in/adrian-rivadera/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Visitá mi Linkedin"
                         >
                             <span className='iconSocialMedia'><LinkedInIcon sx={{ fontSize: 36 }} /></span>
                         </a>
@@ -23,6 +24,7 @@ export function Footer() {
                             href="https://github.com/AdrianRivadera"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Visitá mi GitHub"
                         >
                             <span className='iconSocialMedia'><GitHubIcon sx={{ fontSize: 36 }} /></span>
                         </a>
@@ -75,7 +77,7 @@ const FooterContainer = styled.div`
                     font-size: 2.3rem;
                     cursor: pointer;
                 }:hover{
-                    color: #f4fcff;
+                    color: #147efb;
                     transition: all .2s;
                 }
             }

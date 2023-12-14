@@ -7,7 +7,7 @@ import Tooltip from '@mui/material/Tooltip';
 export function Contacto() {
     return (
         <>
-            <ContactoContainer>
+            <ContactoContainer id='contacto'>
                 <div className='container'>
                     <div className='contacto-content'>
                         <div className='contacto-titulo'>
@@ -18,19 +18,19 @@ export function Contacto() {
                     <div className='contacto-icon'>
 
                         <div className='contacto-icon-box'>
-                            <span className='icono-contacto'><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg></span>
+                            <span className='icono-contacto'><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg></span>
                             <div className='contacto-info'>
                                 <h3>Ubicación</h3>
-                                <p>Buenos Aires, Argentina</p>
+                                <a href='https://www.google.com.ar/maps/place/Buenos+Aires/@-34.6078927,-58.5200469,11.25z/data=!4m6!3m5!1s0x95bcca3d05457fbb:0xe160f4fce7f7c017!8m2!3d-34.6143048!4d-58.4401655!16s%2Fg%2F1tw_pfss?entry=ttu' aria-label='Ciudad de Buenos Aires'>Buenos Aires, Argentina</a>
                             </div>
                         </div>
 
                         <div className='contacto-icon-box'>
-                            <span className='icono-contacto'><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-mail"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path d="M3 7l9 6l9 -6"></path></svg></span>
+                            <span className='icono-contacto'><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tabler-icon tabler-icon-mail"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path d="M3 7l9 6l9 -6"></path></svg></span>
                             <div className='contacto-info'>
                                 <h3>Mail</h3>
                                 <a href="mailto:adrianerivadera@gmail.com">
-                                    <p>adrianerivadera@gmail.com</p>
+                                    adrianerivadera@gmail.com
                                 </a>
                                 
                             </div>
@@ -118,8 +118,11 @@ const ContactoContainer = styled.div`
                     }
                     a{
                         text-decoration: none;
-                        p{
-                            color: #2d2e32;
+                        color: #2d2e32;
+                        transition: all .4s;
+                        font-weight: 500;
+                        &:hover{
+                            color: #147efb;
                         }
                     }
                 }
